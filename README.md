@@ -340,4 +340,13 @@ To help with this process, we have included a ZIP CLI example below:
 
 1. `code.zip` refers to the final package name
 2. `code-folder` refers to the root folder of the package
+
 # mysql-adaptor
+
+This mysql adaptor currrently allows you to connect to a mysql db, inspect your tables, and migrate a table. This is currently a single table today.
+
+1. `getting-started` you should upload this to logic engine within cloudmine
+2. `connection` update the mysqlConnection details with your database details
+3. `inspect` you should send a POST to the 'inspect' endpoint and pass in a json body like so: {table:"table_name"}
+4. `migration` you should send a POST to the 'migration' endpoint and pass in a json body like so: {table:table_name}. The data will be migrated over to cloudmine and stored with a high level key that is the table name, followed by a nested values row-by-row.
+
